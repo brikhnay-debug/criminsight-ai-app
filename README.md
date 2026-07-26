@@ -199,7 +199,7 @@ This app was built through an iterative, conversational process with **Claude (A
 
 ## Author
 
-Built by **[Your Name]** — Master's student in Criminology (final semester) and visiting faculty in the same department.
+Built by **[Brikhna]** — Master's student in Criminology (final semester) and visiting faculty in the same department.
 This project was built for my AI course, applying AI-assisted development to a problem I experience directly on both sides of the classroom.
 Reach out — [your.email@example.com](mailto:your.email@example.com) · [GitHub](https://github.com/your-username) · [LinkedIn](https://linkedin.com/in/your-profile)
 
