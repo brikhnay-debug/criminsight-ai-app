@@ -180,18 +180,6 @@ GitHub Actions (`.github/workflows/ci.yml`) automatically lints, type-checks, an
 |---|---|
 | `screenshots/login.png` | `screenshots/signup.png` |
 
-## Future Improvements
-
-- [ ] Dedicated Research Summary page (PDF/DOCX upload → AI summary → embedded Q&A)
-- [ ] Case Study Analysis library with AI-linked theory tagging
-- [ ] Interview Question Generator as a standalone structured tool
-- [ ] Quiz Generator with scoring, history, and spaced-repetition flashcards
-- [ ] Saved Notes with rich-text editing and resource linking
-- [ ] Usage-based Free/Pro plans (Stripe billing)
-- [ ] Google OAuth sign-in
-- [ ] Dark mode
-- [ ] Real-time collaboration / shared study decks
-- [ ] Automated end-to-end tests (Playwright)
 
 ## Development Process
 
