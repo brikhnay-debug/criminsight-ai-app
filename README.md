@@ -131,8 +131,8 @@ cp .env.example .env.local
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | ✅ | Your Supabase anon/public key |
 | `SUPABASE_SERVICE_ROLE_KEY` | optional | Reserved for future server-only routes — not used yet, never expose to the browser |
 | `GEMINI_API_KEY` | ✅ | Your Google Gemini API key |
-| `GEMINI_MODEL` | optional | Defaults to `gemini-1.5-flash` |
-| `NEXT_PUBLIC_APP_URL` | ✅ | `http://localhost:3000` locally; your live domain in production |
+| `GEMINI_MODEL` | optional | Defaults to `gemini-flash-latest` (a self-updating alias, so it won't break when Google retires a specific model snapshot) |
+| `NEXT_PUBLIC_APP_URL` | ✅ | https://criminsight-ai-app.vercel.app locally; your live domain in production |
 
 `.env.local` is already excluded via `.gitignore` — it will never be committed.
 
@@ -143,7 +143,7 @@ cp .env.example .env.local
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000), sign up for an account, confirm your email (Supabase sends a real confirmation email), log in, and try **Ask AI**.
+Open https://criminsight-ai-app.vercel.app, sign up for an account, confirm your email (Supabase sends a real confirmation email), log in, and try **Ask AI**.
 
 | Script | Purpose |
 |---|---|
@@ -179,6 +179,15 @@ GitHub Actions (`.github/workflows/ci.yml`) automatically lints, type-checks, an
 ## Development Process
 
 This app was built through an iterative, conversational process with **Claude (Anthropic)** as an AI pair-programmer — architecture and planning first, then implementation step by step, verified at each stage (type-checking, linting, and real production builds), with a dedicated round of self-review afterward to find and document security, performance, and accessibility issues before submission. The full step-by-step account — what was built in what order, what tools were used, what I'd do differently — is in **[BUILD_PROCESS.md](./BUILD_PROCESS.md)**.
+## Real-World Deployment Debugging
+
+Getting this from "working on my machine" to "working live for anyone" surfaced two genuine issues I had to diagnose and fix myself:
+
+1. **A deprecated AI model.** The app initially used `gemini-1.5-flash` as its default model. By the time I deployed, Google had fully retired that entire model generation — every request returned a 404. I confirmed this by checking Google's own release notes, then fixed it by switching to `gemini-flash-latest`, a self-updating alias, so a future model retirement won't silently break the app again the same way.
+
+2. **Environment variables don't sync automatically between local and Vercel.** My app worked perfectly locally once the model fix was in place, but the live deployment still failed — because Vercel keeps its own separate copy of environment variables, set once when I first configured the project, which still held the old broken model name. Editing `.env.local` on my computer has zero effect on the live site until the same values are also updated in Vercel's dashboard and the project is redeployed.
+
+Both are documented here because I think showing the debugging process — reading actual error messages and logs rather than guessing — is a more honest picture of the work than pretending deployment was seamless.
 
 ## Author
 
