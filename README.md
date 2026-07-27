@@ -174,11 +174,7 @@ GitHub Actions (`.github/workflows/ci.yml`) automatically lints, type-checks, an
 
 | Landing Page | Ask AI | Dashboard |
 |---|---|---|
-| `screenshots/landing.png` | `screenshots/ask-ai.png` | `screenshots/dashboard.png` |
-
-| Login | Signup |
-|---|---|
-| `screenshots/login.png` | `screenshots/signup.png` |
+![Ask AI](screenshots/ask_ai.png) | ![Dashboard](screenshots/dashboard.png) | ![Login](screenshots/login.png)
 
 
 ## Development Process
