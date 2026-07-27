@@ -170,9 +170,9 @@ GitHub Actions (`.github/workflows/ci.yml`) automatically lints, type-checks, an
 
 ## Screenshots
 
-![Ask AI](screenshots/ask_ai.png)
-
    ![Dashboard](screenshots/dashboard.png)
+
+   ![Ask AI](screenshots/ask_ai.png)
 
    ![Login](screenshots/login.png)
 
