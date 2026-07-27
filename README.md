@@ -170,12 +170,11 @@ GitHub Actions (`.github/workflows/ci.yml`) automatically lints, type-checks, an
 
 ## Screenshots
 
-> Screenshots will be added here once the remaining pages (Research Summary, Case Study Analysis, Quiz Generator, etc.) are built out.
+![Ask AI](screenshots/ask_ai.png)
 
-| Landing Page | Ask AI | Dashboard |
-|---|---|---|
-![Ask AI](screenshots/ask_ai.png) | ![Dashboard](screenshots/dashboard.png) | ![Login](screenshots/login.png)
+   ![Dashboard](screenshots/dashboard.png)
 
+   ![Login](screenshots/login.png)
 
 ## Development Process
 
