@@ -9,7 +9,7 @@
 [![Gemini](https://img.shields.io/badge/AI-Google%20Gemini-4285F4)](https://ai.google.dev)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 
-### 🔗 [**Live App — try it here**](https://REPLACE-WITH-YOUR-VERCEL-URL.vercel.app)
+### 🔗 [**Live App — try it here**](https://criminsight-ai-app.vercel.app/signup)
 
 </div>
 
